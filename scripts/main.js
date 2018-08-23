@@ -21,7 +21,7 @@ submit_btn.addEventListener("click", function submit_form() {
                 cl(resp_data);
                 get_id("recs_ctnr").innerHTML = "";
 
-                get_id("recs_ctnr").innerHTML += "<p>" + resp_data.name + " - " + "Season " + resp_data.season_number + ", Episode " + resp_data.episode_number + "</p><p>" + resp_data.overview + "</p>";
+                get_id("recs_ctnr").innerHTML += "<p id='rec_title'>" + resp_data.name + " - " + "Season " + resp_data.season_number + ", Episode " + resp_data.episode_number + "</p><p>" + resp_data.overview + "</p>";
 
                 submit_btn.innerHTML = "Update";
             })

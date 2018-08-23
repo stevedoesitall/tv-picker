@@ -5,3 +5,7 @@ button {
 select {
     display: block;
 }
+
+#rec_title {
+    font-weight: bold;
+}
