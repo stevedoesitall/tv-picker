@@ -52,29 +52,6 @@ a:hover {
     margin-top: 5em;
 }
 
-#emblem {
-    height: 5em;
-    width: auto;
-}
-
-#logo {
-    height: 3em;
-    width: auto;
-}
-
-#metro {
-    margin-left: 1em;
-}
-
-#options {
-    margin-top: 2.5em;
-}
-
-#recs_list {
-    display: block;
-}
-
-
 .button_link {
     text-decoration: none;
 }

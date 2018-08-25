@@ -1,4 +1,4 @@
-import { get_id, headers, cl, string } from "https://rawgit.com/stevedoesitall/ditkojs/master/ditko.js";
+import { get_id, headers, cl, string, create_el } from "https://rawgit.com/stevedoesitall/ditkojs/master/ditko.js";
 
 const submit_btn = get_id("submit");
 
@@ -27,8 +27,20 @@ submit_btn.addEventListener("click", function submit_form() {
                 // const image = "https://image.tmdb.org/t/p/w500" + resp_data.stil_path;
                 
                 get_id("recs_ctnr").innerHTML = "";
+                const title = create_el("p");
+                    title.innerHTML = name + " - " + "Season " + season_number + ", Episode " + episode_number;
 
-                get_id("recs_ctnr").innerHTML += "<p id='rec_title'>" + name + " - " + "Season " + season_number + ", Episode " + episode_number + "</p><p>Aired: " + air_date + "</p><p>" + overview + "</p>";
+                    title.setAttribute("id", "rec_title");
+
+                const aired = create_el("p");
+                    aired.innerHTML = "Aired: " + air_date;
+
+                const body = create_el("p");
+                    body.innerHTML = overview;
+
+                get_id("recs_ctnr").appendChild(title);
+                get_id("recs_ctnr").appendChild(aired);
+                get_id("recs_ctnr").appendChild(body);
 
                 submit_btn.innerHTML = "Update";
             })
