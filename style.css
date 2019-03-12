@@ -8,10 +8,27 @@
     font-weight: bold;
 }
 
+#season_blurb {
+    padding-left: .5em;
+}
+
+#season_header {
+    padding-bottom: 1em;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #000732;
     color: #FFFFFF;
+}
+
+.radio_btn {
+    margin-right: 1em;
+}
+
+.season_radio {
+    display: block;
+    padding-bottom: .5em;
 }
 
 button {
@@ -32,11 +49,6 @@ h2 {
 
 h3 {
     font-size: 1.1em;
-}
-
-label {
-    margin-bottom: 1em;
-    display: block;
 }
 
 a:link, a:visited {

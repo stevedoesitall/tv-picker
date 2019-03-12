@@ -1,6 +1,38 @@
 import { get_id, headers, cl, string, create_el } from "https://rawgit.com/stevedoesitall/ditkojs/master/ditko.js";
 
 const submit_btn = get_id("submit");
+const season_selection = get_id("season_selection");
+const season_check =  get_id("season_check");
+season_selection.style.display = "none";
+
+season_check.addEventListener("click", function show_seasons() {
+    if (season_check.checked == true) {
+        season_selection.style.display = "block";
+        const show = get_id("shows").value;
+        const data = "seasons";
+        // alert(`Getting recs for ${show}`);
+        fetch("/server", {
+            method: "post",
+            headers: headers,
+            body: string({id: show, data: data})
+        })
+        .then(
+            function(response) {
+            if (response.status != 200) {
+                cl("Error: " + response.status);
+                return;
+            }
+            response.json().then(
+                function(resp_data) {
+                    cl(resp_data);
+                })
+            })
+            .catch(error => cl(error) );
+    }
+    else {
+        season_selection.style.display = "none";
+    }
+});
 
 submit_btn.addEventListener("click", function submit_form() {
     const show = get_id("shows").value;

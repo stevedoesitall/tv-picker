@@ -21,6 +21,25 @@
                 <option value="4608" name="30 Rock">30 Rock</option>
             </select>
             </div>
+    </div>
+    <div id="season_selector">
+        <div id="season_header">
+            <input type="checkbox" id="season_check" name="seasons"/><label for="seasons" id="season_blurb">Pick a season (optional):</label>
+        </div>
+        <div id="season_selection">
+            <div class="season_radio">
+                <input type="radio" class="radio_btn" name="drone" value="1" checked/><label for="1">Season 1</label>
+            </div>
+            <div class="season_radio">
+                <input type="radio" class="radio_btn" name="drone" value="2"/><label for="2">Season 2</label>
+            </div>
+            <div class="season_radio">    
+                <input type="radio" class="radio_btn" name="drone" value="3"/><label for="3">Season 3</label>
+            </div>
+            <!--Empty div to populate seasons-->
+        </div>
+    </div>
+    <div id="button">
         <button class="submit_button" id="submit">Get rec</button>
     </div>
     <div id="recs_ctnr">
