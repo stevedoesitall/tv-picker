@@ -51,6 +51,11 @@ h3 {
     font-size: 1.1em;
 }
 
+label {
+    margin-bottom: 1em;
+    display: block;
+}
+
 a:link, a:visited {
     color: #00CCED;
 }

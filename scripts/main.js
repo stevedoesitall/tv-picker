@@ -34,7 +34,7 @@ season_check.addEventListener("click", function show_seasons() {
     }
 });
 
-submit_btn.addEventListener("click", function submit_form() {
+rec_btn.addEventListener("click", function submit_form() {
     const show = get_id("shows").value;
     // alert(`Getting recs for ${show}`);
     fetch("/server", {
