@@ -8,12 +8,16 @@
     font-weight: bold;
 }
 
-#season_blurb {
+#season_check {
+    margin-right: 1em;
+}
+
+#season_label {
     padding-left: .5em;
 }
 
 #season_header {
-    padding-bottom: 1em;
+    padding-top: 2em;
 }
 
 body {

@@ -9,12 +9,12 @@ season_check.addEventListener("click", function show_seasons() {
     if (season_check.checked == true) {
         season_selection.style.display = "block";
         const show = get_id("shows").value;
-        const data = "seasons";
-        // alert(`Getting recs for ${show}`);
+        const fetch_type = "seasons";
+        console.log(fetch_type);
         fetch("/server", {
             method: "post",
             headers: headers,
-            body: string({id: show, data: data})
+            body: string({id: show})
         })
         .then(
             function(response) {
