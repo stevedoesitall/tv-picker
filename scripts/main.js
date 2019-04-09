@@ -2,7 +2,7 @@ import { get_id, headers, cl, string, create_el } from "https://rawgit.com/steve
 
 const submit_btn = get_id("submit");
 
-rec_btn.addEventListener("click", function submit_form() {
+submit_btn.addEventListener("click", function submit_form() {
     const show = get_id("shows").value;
     // alert(`Getting recs for ${show}`);
     fetch("/server", {
